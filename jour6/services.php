@@ -17,51 +17,33 @@
     </header>
     
     <main>
-        <section class="fond"><img src="assets/img/person-in-front-of-laptop-on-brown-wooden-table-2115217.jpg"></section>
         <section class="description">
-            <h1>Contact</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa minima molestiae dicta iusto inventore nihil aliquid, autem, nobis laboriosam reiciendis ipsam saepe assumenda? Ea pariatur labore necessitatibus nostrum minus excepturi!</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim rem molestias nemo iste voluptates officia laboriosam, iure debitis nam esse accusamus eos magni, illum fugit, magnam sunt numquam! Natus, sit.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa minima molestiae dicta iusto inventore nihil aliquid, autem, nobis laboriosam reiciendis ipsam saepe assumenda? Ea pariatur labore necessitatibus nostrum minus excepturi!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi in corrupti repudiandae perspiciatis animi beatae soluta delectus earum tempora. Quaerat veniam itaque facere exercitationem ea vero quod numquam nesciunt eligendi.</p>
-        </section>
-
-        <section>
-            <h2>Contactez Nous</h2>
-            <form id="contact" action="#contact" method="POST">
-                <input type="text" name="nom" placeholder="entrez votre nom">
-                <input type="email" name="email" placeholder="entrez votre email">
-                <input type="text-area" cols="80" row="8" placeholder="entrez votre message">
-                <button type="submit">Envoyez Votre Message></button>
-            </form>
-        </section>
-
-        <section class="services">
-            <h2>Nos Differents Services</h2>
+            <h1>Services</h1>
             <div class="container">
                 <div class="colonne">
                     <a href="services.html">
-                    <h3>SERVICE 01</h3>
+                    <h2>Service 01</h2>
                     <img src="assets/img/black-flat-screen-computer-monitor-1714208.jpg">
                     </a>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio earum accusamus asperiores ducimus aut velit impedit ipsam expedita a, ullam blanditiis, recusandae sequi temporibus molestias odit vitae. Odit, dolore nulla?</p>
                 </div>
                 <div class="colonne">
                     <a href="services.html">
-                    <h3>SERVICE 02</h3>
+                    <h2>Service 02</h2>
                     <img src="assets/img/blur-close-up-code-computer-546819.jpg">
                     </a>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio earum accusamus asperiores ducimus aut velit impedit ipsam expedita a, ullam blanditiis, recusandae sequi temporibus molestias odit vitae. Odit, dolore nulla?</p>
                 </div>
                 <div class="colonne">
                     <a href="services.html">
-                    <h3>SERVICE 03</h3>
+                    <h2>Service 03</h2>
                     <img src="assets/img/person-in-front-of-laptop-on-brown-wooden-table-2115217.jpg">
                     </a>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio earum accusamus asperiores ducimus aut velit impedit ipsam expedita a, ullam blanditiis, recusandae sequi temporibus molestias odit vitae. Odit, dolore nulla?</p>
                 </div>
             </div>
 
+        </section>
     </main>
 
     <footer>

@@ -17,51 +17,22 @@
     </header>
     
     <main>
-        <section class="fond"><img src="assets/img/black-flat-screen-computer-monitor-1714208.jpg"></section>
         <section class="description">
-            <h1>Services</h1>
+            <h1>Accueil</h1>
             <div class="container">
                 <div class="colonne">
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa minima molestiae dicta iusto inventore nihil aliquid, autem, nobis laboriosam reiciendis ipsam saepe assumenda? Ea pariatur labore necessitatibus nostrum minus excepturi!</p>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim rem molestias nemo iste voluptates officia laboriosam, iure debitis nam esse accusamus eos magni, illum fugit, magnam sunt numquam! Natus, sit.</p>
-                </div>
-                <div class="colonne">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa minima molestiae dicta iusto inventore nihil aliquid, autem, nobis laboriosam reiciendis ipsam saepe assumenda? Ea pariatur labore necessitatibus nostrum minus excepturi!</p>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa minima molestiae dicta iusto inventore nihil aliquid, autem, nobis laboriosam reiciendis ipsam saepe assumenda? Ea pariatur labore necessitatibus nostrum minus excepturi!</p>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim rem molestias nemo iste voluptates officia laboriosam, iure debitis nam esse accusamus eos magni, illum fugit, magnam sunt numquam! Natus, sit.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa minima molestiae dicta iusto inventore nihil aliquid, autem, nobis laboriosam reiciendis ipsam saepe assumenda? Ea pariatur labore necessitatibus nostrum minus excepturi!</p>
                 </div>
                 <div class="colonne">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa minima molestiae dicta iusto inventore nihil aliquid, autem, nobis laboriosam reiciendis ipsam saepe assumenda? Ea pariatur labore necessitatibus nostrum minus excepturi!</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim rem molestias nemo iste voluptates officia laboriosam, iure debitis nam esse accusamus eos magni, illum fugit, magnam sunt numquam! Natus, sit.</p>
+                    <img src="assets/img/apple-laptop-notebook-office-39284.jpg">
                 </div>
             </div>
         </section>
-
-        <section class="services">
-            <h2>Nos Differents Services</h2>
-            <div class="container">
-                <div class="colonne">
-                    <a href="services.html">
-                    <h3>SERVICE 01</h3>
-                    <img src="assets/img/black-flat-screen-computer-monitor-1714208.jpg">
-                    </a>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio earum accusamus asperiores ducimus aut velit impedit ipsam expedita a, ullam blanditiis, recusandae sequi temporibus molestias odit vitae. Odit, dolore nulla?</p>
-                </div>
-                <div class="colonne">
-                    <a href="services.html">
-                    <h3>SERVICE 02</h3>
-                    <img src="assets/img/blur-close-up-code-computer-546819.jpg">
-                    </a>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio earum accusamus asperiores ducimus aut velit impedit ipsam expedita a, ullam blanditiis, recusandae sequi temporibus molestias odit vitae. Odit, dolore nulla?</p>
-                </div>
-                <div class="colonne">
-                    <a href="services.html">
-                    <h3>SERVICE 03</h3>
-                    <img src="assets/img/person-in-front-of-laptop-on-brown-wooden-table-2115217.jpg">
-                    </a>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio earum accusamus asperiores ducimus aut velit impedit ipsam expedita a, ullam blanditiis, recusandae sequi temporibus molestias odit vitae. Odit, dolore nulla?</p>
-                </div>
-            </div>
-
     </main>
 
     <footer>
