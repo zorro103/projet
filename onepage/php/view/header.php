@@ -1,6 +1,8 @@
 <?php
+// POUR INTRO
 $nom="Claude";
 $age="40";
+// POUR FOOTER
 $licence="Tous Droits Réservés";
 $classebody="index";
 ?>
