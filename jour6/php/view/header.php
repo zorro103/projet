@@ -10,9 +10,9 @@
 <body>
     <header>
         <nav class="nav-container">
-            <a href="index.php" class="nav-link">Accueil</a>
-            <a href="services.php" class="nav-link">Services</a>
-            <a href="contact.php" class="nav-link">Contact</a>
+            <a href="index.php">Accueil</a>
+            <a href="services.php">Services</a>
+            <a href="contact.php">Contact</a>
         </nav>
     </header>
     
