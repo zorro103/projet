@@ -4,13 +4,20 @@
             <div class="container">
                 <div class="colonne">
                     <form id="contact" action="contact.php#section-contact" method="GET">
+                        
                         <input type="text" name="nom" placeholder="Entrez votre nom (*)" class="champ" required>
                         
                         <input type="email" name="email" placeholder="Entrez votre email" class="champ">
 
                         <textarea name="message" placeholder="Entrez votre message" maxlength="1000" class="champ-message"></textarea>
-                        
+
                         <button type="submit" class="bouton">Envoyez Votre Message</button>
+
+                        <div>
+                            <!-- ICI ON VEUT VOIR LE MESSAGE DE CONFIRMATION -->
+                            <?php require_once "php/controller/traitement-contact.php" ?>
+                        </div>
+
                     </form>
                 </div>
                 <div class="colonne">

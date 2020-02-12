@@ -11,7 +11,7 @@
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa minima molestiae dicta iusto inventore nihil aliquid, autem, nobis laboriosam reiciendis ipsam saepe assumenda? Ea pariatur labore necessitatibus nostrum minus excepturi!</p>
                 </div>
                 <div class="colonne">
-                    <img src="assets/img/apple-laptop-notebook-office-39284.jpg">
+                    <img src="assets/img/photo01.jpg">
                 </div>
             </div>
         </section>
