@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="colonne">
                     <form id="contact" action="contact.php#section-contact" method="GET">
-                        
+
                         <input type="text" name="nom" placeholder="Entrez votre nom (*)" class="champ" required>
                         
                         <input type="email" name="email" placeholder="Entrez votre email" class="champ">
@@ -13,7 +13,14 @@
 
                         <button type="submit" class="bouton">Envoyez Votre Message</button>
 
-                        <div>
+                        <div class="confirmation">
+                            <!-- 
+                            JE METS action="contact.php#section-contact" POUR RESTER SUR LA MEME PAGE
+                            ET REVENIR SUR L'ANCRE #ssection-contact
+                            (note: les ancres utilisent l'attribut id="section-contact" ... pas de class)
+                            simplification si on met action="#section-contact"
+                            => On reste sur la même page
+                            -->
                             <!-- ICI ON VEUT VOIR LE MESSAGE DE CONFIRMATION -->
                             <?php require_once "php/controller/traitement-contact.php" ?>
                         </div>

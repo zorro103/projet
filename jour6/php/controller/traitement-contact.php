@@ -1,18 +1,22 @@
 <?php
-
-// ON A 2 SCENARIOS
-// SCENARIO1: J'ARRIVE SUR LA PAGE => PAS D'INFOS DE FORMULAIRE
-// SCENARIO2: LE VISITEUR A CLIQUE SUR LE BOUTON ET A ENVOYE LES INFOS DU FORMULAIRE
+    /*
+    ON A 2 SCENARIOS
+    SCENARIO 1: J'ARRIVE SUR LA PAGE => PAS D'INFOS DE FORMULAIRE >> c'est le IF mais on peut supprimer ce cas
+    SCENARIO 2: LE VISITEUR A CLIQUE SUR LE BOUTON ET A ENVOYE LES INFOS DU FORMULAIRE >> c'est le Else mais
+    du coup on le met en if car on a supprimé le scenario 1 car inutile
+    */
 
 $nbInfo = count($_REQUEST);
 if ($nbInfo > 0)
 {
-    // DEBUG
-    // echo "SCENARIO 2";
-    // SCENARIO 2
-    // ICI JE DOIS RAJOUTER LE CODE PHP POUR TRAITER LES INFORMATIONS DU FORMULAIRE
-    // ET AFFICHER LE MESSAGE DE CONFIRMATION
-    // SI JE VEUX RECUPERER LES INFOS DANS $_REQUEST QUI EST UNE VARIABLE CREEE PAR PHP
+    /*
+    DEBUG
+    echo "SCENARIO 2";
+    SCENARIO 2
+    ICI JE DOIS RAJOUTER LE CODE PHP POUR TRAITER LES INFORMATIONS DU FORMULAIRE
+    ET AFFICHER LE MESSAGE DE CONFIRMATION
+    SI JE VEUX RECUPERER LES INFOS DANS $_REQUEST QUI EST UNE VARIABLE CREEE PAR PHP
+    */
     $nom        = $_REQUEST["nom"];
     $email      = $_REQUEST["email"];
     $message    = $_REQUEST["message"];
@@ -21,16 +25,20 @@ if ($nbInfo > 0)
 
     $messageStocke =
         <<<texte
-            nom: $nom
-            email: $email
-            message:
-            $message
+        nom: $nom
+        email: $email
+        message:
+        $message
+
+
         texte;
     
-    // SUR WINDOWS:
-    // PHP VA CREER LE FICHIER contact.txt
-    // MAIS IL FAUT CREER LE DOSSIER php/model/ AVANT
-    // FILE_APPEND PERMET DE NE PAS ECRASER LES MESSAGES PRECEDENTS
+    /*
+    SUR WINDOWS:
+    PHP VA CREER LE FICHIER contact.txt
+    MAIS IL FAUT CREER LE DOSSIER php/model/ AVANT
+    FILE_APPEND PERMET DE NE PAS ECRASER LES MESSAGES PRECEDENTS
+    */
     file_put_contents("php/model/contact.txt", $messageStocke, FILE_APPEND);
     
     // AFFICHER LE MESSAGE DE CONFIRMATION
