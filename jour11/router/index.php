@@ -1,24 +1,18 @@
 <?php
 
-// On récupère le paramètre page dans l'url en GET
-/*
+// On récupère le paramètre page dans l'url en GET qui n'est pas vide
+// (!empty) veut dire l'inverse d'empty donc rempli
 if (!empty($_REQUEST['page'])) {
 
+    // on met le nom de la page en minuscules avec string to lower puis on construit le nom du template
     $page = strtolower($_REQUEST)['page']) . '.php';
 
-
-
-
-
-
-
+    // On récupère la liste des templates avec scandir
+    // 1 pour ordre croissant
+    // https://www.php.net/manual/en/function.scandir.php
+    $templates = scandir('templates', 1); 
 
 }
-*/
-
-
-
-
 ?>
 
 <!DOCTYPE html>
