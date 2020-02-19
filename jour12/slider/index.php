@@ -11,11 +11,12 @@
     
     
     <nav>
-        <img src="assets/img/hamburger-wh.png">
+        <div class="nav-button"></div>
         <ul class="menu-lateral">
-            <li>Lien 01</li>
-            <li>Lien 02</li>
-            <li>LIen 03</li>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Blog</a‹></li>
+            <li><a href="#">Contact</a‹></li>
         </ul>
     </nav>
 
