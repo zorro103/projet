@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>JOUR 14</h1>
-    <h1>Comment on déclare ue fonction</h1>
+    <h1>Comment on déclare une fonction</h1>
     <script src="assets/js/app.js"></script>
     
 </body>
