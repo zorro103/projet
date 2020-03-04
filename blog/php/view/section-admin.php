@@ -4,12 +4,12 @@
             
             <form class="admin" action="" method="POST">
                 <input type="text" name="titre" placeholder="Entrez le Titre" required>
-                <textarea name="contenu" id="" cols="60" rows="6" placeholder="Entrez le Contenu" required></textarea>
+                <textarea name="contenu" id="" cols="60" rows="15" placeholder="Entrez le Contenu" required></textarea>
                 <!-- POUR L'IMAGE ON DEVRAIT PROPOSER UN UPLOAD => ON VERRA PLUS TARD -->
                 <input type="text" name="image" value="assets/img/photo03.jpg" required>
                 <input type="text" name="datePublication" value="<?php echo date("Y-m-d H:i:s") ?>">
                 <input type="text" name="categorie" placeholder="Entrez la Catégorie" required>
-                <button type="submit" class="big-button">PUBLIER L'ARTICLE</button>
+                <button type="submit" class="big-button">PUBLIEZ L'ARTICLE</button>
                 <div class="confirmation">
 
                 <?php

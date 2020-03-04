@@ -75,7 +75,8 @@ main img {
 .listeArticle article {
     width: calc(100% / 3 - 20px);
     margin-right: 20px;
-    order: 10;   /* POUR CHOISIR L'ORDRE D'AFFICHAGE DES ELEMENTS */
+    /* POUR CHOISIR L'ORDRE D'AFFICHAGE DES ELEMENTS */
+    order: 10;
 }
     
 article.sante {
@@ -103,12 +104,13 @@ article img {
 .admin {
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
 
 .admin > * {
     margin: 0.25rem;
     padding: 0.25rem;
-    color: inherit;
+    color: #000000;
     font-size: 13px;
     font-family: inherit;
     border-radius: 5px;
