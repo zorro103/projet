@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+.nav-container {
+    background-color: #000000;
+    padding: 20px 5% 20px 0px;
+    width: 100%;
+    text-align: right;
+    position: fixed;
+}
+
+.nav-container a{
+    color: #FFFFFF;
+    font-size: 20px;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.nav-container a:hover {
+    /* color: #47c7ff; */
+    color: #975aff;
+}
+
+.brand-logo {
+    width: 30px;
+    display: block;
+    float: left;
+    margin-left: 30px;
+    margin-top: -4px;
+}
+
+.brand {
+    font-size: 26px;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    margin-left: 15px;
+    margin-top: -4px;
+    color: #51bbff;
+}
+
+h1 {
+    font-size: 20px;
+    color: #666666;
+}
+
+h2 {
+    font-size: 18px;
+    color: #9459f9;
+}
+
+main {
+    padding: 90px 10px 120px 30px;
+}
+
+main img {
+    width: 50%;
+}
+
+.listeArticle {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.listeArticle article {
+    width: calc(100% / 3 - 20px);
+    margin-right: 20px;
+    order: 10;   /* POUR CHOISIR L'ORDRE D'AFFICHAGE DES ELEMENTS */
+}
+    
+article.sante {
+    /* EXCEPTION : J'OUTREPASSE L'ORDRE DE LA REQUETE ET JE METS LES ARTICLES CATEGORIE sante
+    EN PRIORITAIRE DANS L'ORDRE D'AFFICHAGE */
+    order: 1;
+    /* ET JE PEUX L'AGGRANDIR */
+    /* width: 60%; */
+}
+
+article img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.date {
+    color: #A4A3A3;
+    font-style: italic;
+    font-size: 12px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.admin {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin > * {
+    margin: 0.25rem;
+    padding: 0.25rem;
+    color: inherit;
+    font-size: 13px;
+    font-family: inherit;
+    border-radius: 5px;
+    border-style: solid;
+    
+}
+
+.big-button {
+    margin: 15px 0px;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    color: #FFFFFF;
+    background-color: #4c4c4c;
+    border-radius: 8px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.big-button:hover {
+    background-color: #ad55ff;
+}
+
+.confirmation {
+    border: 0px;
+}
+
+footer {
+    background-color: #000000;
+    padding: 30px 50px;
+    width: 100%;
+    color: #FFFFFF;
+    /* sticky footer */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
