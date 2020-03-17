@@ -1,10 +1,9 @@
 </main>
     <footer>
-        <!-- POUR NOUS POUR NAVIGUER PLUS SIMPLEMENT ENTRE LES PAGES -->
-        <nav>
-            <a href="index.php">Accueil</a>
-            <a href="attestation.php">Attestation</a>
-        </nav>
+        <a href="verifier.php">Vérifier</a>
+        I &nbsp
+        <a href="admin.php">Admin</a>
+        <p class="droits">Tous Droits Réservés 2020</p>
     </footer>
 
     <script src="assets/js/app.js"></script>

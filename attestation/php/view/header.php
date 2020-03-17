@@ -9,10 +9,14 @@
 </head>
 <body>
     <header>
-        <h1>SITE POUR DECLARER VOS SORTIES</h1>
-        <img src="assets/img/logo01.png" alt="logo">
-        <nav>
+        <nav class="nav-container">
+            <!-- LOGO ET TITRE -->
+            <a href="index.php">
+            <img src="assets/img/logo01.png" alt="logo" class="brand-logo">
+            <div class="brand">DECLARER VOS SORTIES</div>
+            </a>
             <a href="index.php">Accueil</a>
+            I
             <a href="attestation.php">Attestation</a>
         </nav>
     </header>
