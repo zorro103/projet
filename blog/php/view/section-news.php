@@ -39,29 +39,33 @@
             // ------------------------------------------------------------------------------------------
 
 
-
+            // ETAPE 1: LANCER UNE REQUETE SQL EN LECTURE
             // POUR RECUPERER LES INFOS DE SQL
-            // ETAPE1: CONNECTER PHP A SQL
-            // JE ME CONNECTE A MA BASE BLOG
-            $pdo = new PDO("mysql:host=localhost;dbname=blog;charset=utf8;", "root", "");
-            // ETAPE2: LANCER UNE REQUETE SQL EN LECTURE
             // JE LANCE UNE REQUETE SUR MES ARTICLES ET JE LES CLASSE PAR DATE DE PUBLICATION DU PLUS RECENT AU PLUS ANCIEN
             $requeteSQL =
             <<<CODESQL
             SELECT * FROM `articles`
             ORDER BY datePublication DESC
             CODESQL;
-            
-            // https://www.php.net/manual/fr/pdo.query.php
-            // PDOStatement EST UN CONTAINER QUI ENGLOBE LES RESULTATS DE LA REQUETE SQL
-            $pdoStatement = $pdo->query($requeteSQL);
 
-            //console.log ($pdoStatement);
+            $tabAssoColonneValeur =[];
+
+            // ETAPE 2 : JE ME CONNECTE A LA BASE, JE CONNECTE PHP A SQL
+            $pdo = new PDO("mysql:host=localhost;dbname=blog;charset=utf8;", "root", "");
+            // ENVOYER LA REQUETE   
+            // https://www.php.net/manual/fr/pdo.query.php
+            // ETAPE 2A : ON ENVOIE LA REQUETE PREPAREE
+            // PDOStatement EST UN CONTAINER QUI ENGLOBE LES RESULTATS DE LA REQUETE SQL
+            $pdoStatement = $pdo->prepare($requeteSQL);
+            // ETAPE 2B : ON FOURNIT LES DONNEES EXTERIEURES A PART
+            $pdoStatement->execute($tabAssoColonneValeur);
+
 
             // ETAPE3: JE RECUPERE MON TABLEAU DE RESULTATS
             // https://www.php.net/manual/fr/pdostatement.fetchall.php
             $tabLigne = $pdoStatement->fetchAll();
 
+            // ON FAIT UNE BOUCLE POUR AFFICHER CHAQUE ARTICLE
             foreach($tabLigne as $tabAsso)
             {
                 $id              = $tabAsso["id"];
@@ -71,16 +75,21 @@
                 $datePublication = $tabAsso["datePublication"];
                 $categorie       = $tabAsso["categorie"];
 
-            // J'AFFICHE CHAQUE ARTICLE DANS MA PAGE
+                // SIMPLIFICATION
+                // https://www.php.net/manual/fr/function.extract.php
+                // extract CREE DES VARIABLES A PARTIR DES CLES DU TABLEAU ASSOCIATIF
+                // extract($tabAsso); 
 
-                echo
+            // J'AFFICHE CHAQUE ARTICLE DANS MA PAGE
+            echo
             <<<CODEHTML
-                <article class="$categorie">
-                    <img src="$image" alt="photo">
-                    <h2>$titre</h2>
-                    <p>$contenu</p>
-                    <p class="date">$datePublication</p>
-                </article>
+
+                            <article class="$categorie">
+                                <img src="$image" alt="photo">
+                                <h2>$titre</h2>
+                                <p>$contenu</p>
+                                <p class="date">$datePublication</p>
+                            </article>
             CODEHTML;
             }
 
@@ -97,17 +106,17 @@
             <h1>Liste des Articles en HTML</h1>
             <div class="listeArticle">
                 <article>
-                    <img src="assets/img/photo04.jpg" alt="photo04">
+                    <img src="assets/img/photo04.jpg" alt="photo">
                     <h2>Titre Article 04</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, delectus! Labore, similique veniam. Optio, similique itaque. Maiores perferendis reiciendis qui delectus consectetur, repellat praesentium repudiandae veniam, tenetur corporis labore officia.</p> 
                 </article>
                 <article>
-                    <img src="assets/img/photo05.jpg" alt="photo05">
+                    <img src="assets/img/photo05.jpg" alt="photo">
                     <h2>Titre Article 5</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, delectus! Labore, similique veniam. Optio, similique itaque. Maiores perferendis reiciendis qui delectus consectetur, repellat praesentium repudiandae veniam, tenetur corporis labore officia.</p> 
                 </article>
                 <article>
-                    <img src="assets/img/photo06.jpg" alt="photo06">
+                    <img src="assets/img/photo06.jpg" alt="photo">
                     <h2>Titre Article 6</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, delectus! Labore, similique veniam. Optio, similique itaque. Maiores perferendis reiciendis qui delectus consectetur, repellat praesentium repudiandae veniam, tenetur corporis labore officia.</p> 
                 </article>
