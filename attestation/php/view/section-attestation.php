@@ -4,7 +4,7 @@
             <form action="" method="post">
                 <input type="text" name="nom" placeholder="Votre Nom" required>
                 <input type="text" name="prenom" placeholder="Votre Prénom" required>
-                <textarea name="adresse" id="" cols="60" rows="6" placeholder="Votre Adresse" required></textarea>
+                <textarea name="adresse" id="" cols="60" rows="3" placeholder="Votre Adresse" required></textarea>
                 <h3>Cochez la raison de votre déplacement</h3>
                 <label>
                     <input type="radio" name="raison" id="" value="courses alimentaires" required>
@@ -36,34 +36,23 @@
                     <span>Sortie Sport Individuel</span>
                 </label>
 
-                <button type="submit">Enregistrer ma déclaration</button>
+                <button type="submit" class="big-button">Enregistrer ma déclaration</button>
 
-                <!-- IDENTIFIANT POUR QUE PHP SACHE QUEL FORMULAIRE IL DOIT TRAITER -->
+                <!-- IDENTIFIANT POUR QUE PHP PUISSE DISTINGUER LES FORMULAIRES -->
+                <!-- invisible donc on peut rajouter cette balise en balise enfant de form mais dans l'ordre qu'on veut -->
                 <input type="hidden" name="identifiantFormulaire" value="declaration">
-                <!-- Ceci sera utile avec AJAX et JS  -->
+                <!-- ce sera utile avec JS et ajax pour sélectionner la balise... -->
                 <div class="confirmation">
                     <?php
                     // CODE POUR TRAITER LE FORMULAIRE
 
-                    // ON PEUT CREER DES FONCTIONS POUR NOUS FACILITER LE CODE
-                    // AVANTAGE1: NE PAS DUPLIQUER DES BLOCS DE CODE IDENTIQUES
-                    // AVANTAGE2: AJOUTER DU CODE DE SECURITE POUR FILTRER CHAQUE INFO EXTERIEURE
+                    // ON SEPARE LE CODE DE NOS FONCTIONS DANS UN FICHIER COMMUN
+                    require_once "php/mes-fonctions.php";
 
-                    // ICI ON VA CHERCHER CHAQUE VALEUR DE INPUT DU FORMULAIRE
-                    function filtrer ($name)
-                    {
-                        // SECURITE: ?? "" => SI LE NAVIGATEUR N'ENVOIE PAS L'INFO, ON PREND COMME VALEUR PAR DEFAUT ""
-                        $info = $_REQUEST[$name] ?? "";
-                        // ON POURRA RAJOUTER PLUS DE SECURITE
-                        // ...
-
-                        return $info;
-                    }
 
                     // ATTENTION: LE CODE PHP EST ASSOCIE AU CODE HTML
                     // <input type="hidden" name="identifiantFormulaire" value="declaration">
 
-                    // CODE POUR TRAITER LE FORMULAIRE
                     // VERIFIER SI LE FORMULAIRE A ETE ENVOYE
                     // $identifiantFormulaire = $_REQUEST["identifiantFormulaire"] ?? "";
                     $identifiantFormulaire = filtrer("identifiantFormulaire");
@@ -97,27 +86,10 @@
                                 // https://www.php.net/manual/fr/function.date.php
                                 $tabAssoColonneValeur["dateDeclaration"] = date("Y-m-d H:i:s");
 
-                                // MAINTENANT JE PEUX CONSTRUIRE LA REQUETE SQL PREPAREE
-                                $requeteSQL =
-                    <<<CODESQL
-                    INSERT INTO declaration
-                    (nom, prenom, adresse, raison, numero, dateDeclaration) 
-                    VALUES 
-                    (:nom, :prenom, :adresse, :raison, :numero, :dateDeclaration) 
-                    CODESQL;
-                                // ENSUITE, ON VA ENVOYER LA REQUETE SQL PREPAREE
-                                // CONNECTER A SQL
-                                
-                                // ETAPE1: CONNECTER PHP A SQL
-                                // ATTENTION: NE PAS OUBLIER DE CHANGER LA DATABASE...
-                                $pdo = new PDO("mysql:host=localhost;dbname=attestation;charset=utf8;", "root", "");
-
-                                // ETAPE2a: ON ENVOIE LA REQUETE PREPAREE
-                                // PDOStatement EST UN CONTAINER QUI ENGLOBE LES RESULTATS DE LA REQUETE SQL
-                                $pdoStatement = $pdo->prepare($requeteSQL);
-
-                                // ETAPE2b: ON FOURNIT LES DONNEES EXTERIEURES A PART
-                                $pdoStatement->execute($tabAssoColonneValeur);
+                                // ETAPE2: ACTIVER LE CODE DE LA FONCTION
+                                insererLigneSQL("declaration", $tabAssoColonneValeur);
+                                // PHP FAIT $nomTable = "declaration" 
+                                // PHP FAIT $param1 = $tabAssoColonneValeur
 
                                 // DEBUG
                                 echo "votre déclaration est bien enregistrée. NOTEZ BIEN VOTRE NUMERO D'ATTESTATION {$tabAssoColonneValeur["numero"]}";
@@ -128,6 +100,7 @@
                         }
 
                     }
+
                     ?>
                 </div>
             </form>

@@ -16,7 +16,7 @@
             <div class="brand">DECLARER VOS SORTIES</div>
             </a>
             <a href="index.php">Accueil</a>
-            I
+            <span class="separateur">I</span>
             <a href="attestation.php">Attestation</a>
         </nav>
     </header>

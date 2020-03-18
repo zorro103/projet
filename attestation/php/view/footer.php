@@ -1,7 +1,7 @@
 </main>
     <footer>
         <a href="verifier.php">Vérifier</a>
-        I &nbsp
+        <span class="separateur">I</span>
         <a href="admin.php">Admin</a>
         <p class="droits">Tous Droits Réservés 2020</p>
     </footer>
