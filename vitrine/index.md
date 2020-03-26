@@ -8,3 +8,4 @@ require_once "php/view/footer.php";
 
 //  SIMPLIFICATION
 // LA FIN DU FICHIER SERT DE BALIDE FERMANTE A PHP
+?>
