@@ -14,4 +14,4 @@ require_once "php/view/footer.php";
 
 <h1>COUCOU</h1>
 
-<p>Cesci est le test 01</p>
+<p>Ceci est le test 01</p>
