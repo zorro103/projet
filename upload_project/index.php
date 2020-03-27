@@ -3,15 +3,24 @@
     // On se connecte à la base
     $pdo = getConnection();
 
-    // $string ='Hello les Guys';
 
-    //echo sert à afficher la chaîne de caractères
-    // echo "$string";
+    // ---------------------------------------------------------------------------
+    
+    // DIFFERENCE ENTRE echo "", var_dump () et pint_r () /
 
-    // var_dump "$string";
+    // $x ="Hello les Guys";
 
-    // print_r sert à afficher le tableau
-    //print_r($string);
+    // echo sert à afficher la valeur : Hello les Guys de la variable $x
+    // echo "$x";
+
+    // var_dump sert à afficher la valeur Hello les Guys de la variable $x et son type (string qui est une chaîne de caractères)
+    // var_dump ($x);
+
+    // print_r sert à afficher le tableau (mais là il y a une seule variable) 
+    // print_r($x);
+
+    // ---------------------------------------------------------------------------
+
 
     // permet d'afficher que c'est un tableau
     // print_r($_REQUEST);
