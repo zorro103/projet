@@ -13,8 +13,8 @@ function nomDeMaFonction ($tabNombre)
     // En fait je crée le tableau avec une boucle foreachbla
     foreach($tabNombre as $nombre)
     {
-        //ETAPE 4 : EXTRACTION
-        // J'extrait et j'affiche avec echo les valeurs du tableau
+        //ETAPE 4 : AFFICHAGE
+        // J'affiche avec echo les valeurs du tableau
         echo "($nombre)";
     }
 

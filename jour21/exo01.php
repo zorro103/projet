@@ -21,8 +21,8 @@
 
  $resultat = compare (4, 5);
 
-echo "<p>$resultat</p>";
+echo "<p>Ceci est le 1er résultat : $resultat</p>";
 
 $resultat = compare (156, 25);
 
-echo "<p>$resultat</p>";
+echo "<p>Ceci est le 2eme résultat : $resultat</p>";
