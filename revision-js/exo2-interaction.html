@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTERACTION</title>
+    <style>
+        .article1 {
+            border:1px solid green;
+            padding:1rem;
+        } 
+
+        .cacher {
+            display: none;
+        }
+
+        .bouton1 {
+            color: #FFF;
+            background-color: #999999;
+            padding: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .bouton2 {
+            color: #FFF;
+            background-color: #6d6d6d;
+            padding: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <section>
+        <h2>INTERACTION</h2>
+        <p><button class="bouton1">BOUTON 1 - CLIQUER ICI POUR CACHER L'ARTICLE (VERSION NORMALE)</button></p>
+        <p><button class="bouton2">BOUTON 2 - CLIQUER ICI POUR CACHER L'ARTICLE (VERSION COMPACTE)</button></p>
+
+        <article class="article1">
+            <h3>TITRE ARTICLE</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia cum cupiditate illo eveniet optio nisi dignissimos nemo quasi temporibus? Beatae quibusdam laudantium accusantium in magni nesciunt ratione omnis at recusandae.</p>
+        </article>
+    </section>
+    
+    <script>
+    // SI LE VISITEUR CLIQUE SUR LE BOUTON
+    // ALORS ON VA AJOUTER LA CLASSE cacher A LA BALISE article
+    // ON A BESOIN DE DETERMINER LES 2 CLASSES DONT ON A BESOIN : le bouton1 et le bouton2 et l'article
+    var bouton1  = document.querySelector(".bouton1");
+    var bouton2  = document.querySelector(".bouton2"); // BOUTON 2 POUR LA VERSION COMPACTE
+    var article1 = document.querySelector(".article1");
+
+
+    // ECRITURE NORMALE
+    function cacherArticle ()
+    {
+        // DEBUG
+        // console.log("FONCTION ACTIVEE..");
+
+        // https://developer.mozilla.org/fr/docs/Web/API/Element/classList
+
+        // ICI ON DOIT RAJOUTER LE CODE POUR CACHER L'ARTICLE
+        // ON VA AJOUTER LA CLASSE cacher A LA BALISE article1
+        // article1.classList.add("cacher"); // ATTENTION PAS .cacher MAIS JUSTE cacher
+
+        // PRATIQUE POUR BASCULER: 
+        // SOIT ON AJOUTE LA CLASSE SI ELLE N'EST PAS PRESENTE
+        // SOIT ON ENLEVE LA CLASSE SI ELLE EST PRESENTE
+        article1.classList.toggle("cacher");
+
+        // POSSIBLE MAIS PAS RECOMMENDE...
+        // article1.setAttribute("class", "cacher");
+    }
+
+    // C'EST LE VISITEUR QUI VA DECLENCHER L'APPEL A LA FONCTION cacherArticle
+    bouton1.addEventListener("click", cacherArticle);
+
+
+    // ECRITURE COMPACTE MAIS POPULAIRE CAR LES DEVS SONT DES FLEMMARDS...
+    bouton2.addEventListener("click", function ()
+    {
+        article1.classList.toggle("cacher");
+    });
+
+    </script>
+
+</body>
+</html>
