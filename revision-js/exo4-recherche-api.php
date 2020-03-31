@@ -6,7 +6,7 @@
 // (INJECTION SQL)
 $recherche = $_REQUEST["recherche"] ?? "";
 
-// AVEC LIKE C'EST SQL QUI FAIT TOUT LE TRAVAIL ;-p
+// AVEC LIKE C'EST SQL QUI FAIT TOUT LE TRAVAIL ;-
 // https://sql.sh/cours/where/like
 $tabAssoColVal = [ "titre" => "%$recherche%" ];
 

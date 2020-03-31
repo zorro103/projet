@@ -1,6 +1,6 @@
 <?php
 
-// CE FICHIER PHP VA FOURNIR DES DONNEES AU FORMAT JSON
+// CE FICHIER PHP VA FOURNIR DES DONNEES AU FORMAT JSON 
 
 // https://www.php.net/manual/fr/function.json-encode.php
 // EN PHP, ON A DES TABLEAUX ASSOCIATIFS
