@@ -16,9 +16,9 @@
             </div>
             <div>
                 <label id="title" for="descripttion">Description de la tâche</label>
-                <input type="text" id="descripttion" name="descripttion" placeholder="Entrez la description de la tâche required">
+                <input type="text" id="descripttion" name="descripttion" placeholder="Entrez la description de la tâche" required>
             </div>
-            <button class="bouton">Save</button>
+            <button class="bouton">Enregistrer Tâche</button>
 
         </form>
         <div class="todos">

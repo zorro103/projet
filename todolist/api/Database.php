@@ -43,12 +43,14 @@ class Database {
 }
 
 // POUR VERIFIER SI ON EST BIEN CONNECTE (le message s'affiche dans le corps de la page)
-$objet = new Database();
-$pdo = $objet->connect();
-// ou ça qui revient à peu près au même
+// $objet = new Database();
+// $pdo = $objet->connect();
+
+// ou ça qui revient au même (enfin pas exactement, à revoir)
 // return $objet->connect();
 
 
+// ------------------------------------------------------------------------------------------
 
 // pour exemple seulement :
 
