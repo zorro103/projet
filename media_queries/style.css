@@ -42,6 +42,6 @@
         margin: 20px;
     }
     nav {
-        
+        display: none;
     }
 }
