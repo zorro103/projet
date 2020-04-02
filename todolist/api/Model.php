@@ -32,7 +32,7 @@ class Model {
         $PdoStatement->execute();
 
         // Debug : affichage du résultat
-        print_r($PdoStatement->fetchAll());
+        // print_r($PdoStatement->fetchAll());
 
         // Je return le résultat de ma requête
         return $PdoStatement->fetchAll();

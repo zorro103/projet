@@ -21,12 +21,13 @@
             <button class="bouton">Enregistrer Tâche</button>
 
         </form>
-        <div class="todos">
 
+        <div class="todos">
         </div>
+
     </section>
 
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
     
 </body>
 </html>

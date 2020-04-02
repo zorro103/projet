@@ -12,7 +12,7 @@ function getTodos() {
       const todos = data.payload;
       todos.forEach(elem => {
         todosContainer.innerHTML += `
-          <div style="border: 1px solid #333; margin-top: 1rem;">
+          <div class="todo-interne">
             <h2>${elem.title}</h2>
             <p>${elem.description}</p>
           </div>

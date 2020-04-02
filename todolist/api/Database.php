@@ -34,9 +34,9 @@ class Database {
             // on va stocker dans la propriété de classe conn une nouvelle instance de l'objet POO
             $this->conn = new PDO($this->dsn, $this->username, $this->pwd, $this->options);
             // on vérifie qu'on est bien connecté à la base avec un echo
-            echo 'Connection Etablie ! ';
+            // echo 'Connection Etablie ! ';
         } catch (\PDOException $error) {
-            echo 'Error : '.$error->getMessage();
+            // echo 'Error : '.$error->getMessage();
         }
         return $this->conn;
     }

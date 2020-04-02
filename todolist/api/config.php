@@ -4,13 +4,13 @@
 const DSN = 'mysql:host=localhost;dbname=todolist;charset=utf8';
 // nom user mysql
 const USERNAME = 'root';
-// mot de passe mysql
+// mdp user mysql
 const PWD = '';
 
-//options PDO
+// options PDO
 const OPTIONS = [
-    // On définit l'option d'affichage des résultats PDO sous la forme d'un tableau aoociatif
+    // on définit l'option d'affichage des résultats PDO sous la forme de tableau associatif
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    // On spécifie qu'on veut récupérer les excetions éventuelles
+    // on spécifie qu'on veut récupérer les exceptions éventuelles
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 ];
