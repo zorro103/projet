@@ -3,7 +3,7 @@
 // on a besoin d'une connection à la BDD
 require_once 'Database.php';
 
-// on a besoin d'une classe qui va gérer les interactions avecla BDD
+// on a besoin d'une classe qui va gérer les interactions avec la BDD
 // CRUD
 
 class Model {
@@ -33,6 +33,9 @@ class Model {
 
         // Debug : affichage du résultat
         print_r($PdoStatement->fetchAll());
+
+        // Je return le résultat de ma requête
+        return $PdoStatement->fetchAll();
     }
 
     // CREATE
@@ -84,7 +87,7 @@ class Model {
 
 // POUR VERIFIER SI ON RECOIT BIEN LES DONNEES DE LA BASE
 // $model = new Model();
-// $model->getTodos(); // Pour voir si on récupère bien la table 
+// $response = $model->getTodos(); // Pour voir si on récupère bien la table 
 
 
 // POUR VERIFIER SI ON ENVOIE BIEN LES DONNEES A LA BASE
