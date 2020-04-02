@@ -1,39 +1,48 @@
 <?php
 
-class TodoController
-{
-    // propriétés de classe
+class TodoController {
+
+    // Propriétés de classe
     private $model;
 
     // constructeur prend en paramètre une instance de ma classe Model
-    public function __construct($model)
-    {
+    public function __construct($model) {
+
         $this->model = $model;
+
     }
 
     // méthodes de classe
-    public function getAll()
-    {
+    public function getAll() {
+
+        //On stocke dans une variable le tableau renvoyé par getTodos
         $data = $this->model->getTodos();
 
-        // je veux vérifier s'il y a au moins 1 élément dans mon tableau
+        // Pour vérifier qu'on recoit bien le tableau
+        // echo '<pre>';
+        // print_r($data);
+        // echo '</pre>';
+
+        // Je veux vérifier s'il y a au moins 1 élément dans mon tableau
         if (count($data) > 0) {
             // code à exécuter si la condition est vraie
             // je construis ma réponse sous la forme d'un tableau associatif
             $response = [
                 'status' => 'success',
-                'message' => 'Les données ont bien été récupérées',
+                'message' => 'les données ont bien été récupérées',
+                // On récupère le tableau stocké dans data
                 'payload' => $data,
             ];
-        } else {
-            // code à excécuter si la conditionest fausse
+        }
+        else {
+            // code à exécuter si la condition est fausse
             $response = [
                 'status' => 'error',
-                'message' => 'Aucune données dans la table',
-            ];
+                'message' => 'Aucune donnees dans la table',
+            ];       
         }
 
-        // je dois transformer le tableau associatif de la réponse en JSON qui va pouvoir être compris et exploité par JS
+        // Je dois transfomer la tableau associatif de la réponse en JSON qui va pouvoir être compris et exploité par JS
         echo json_encode($response);
     }
 
@@ -68,24 +77,21 @@ class TodoController
         // sinon réponse de type erreur
     }
 
-    // update
+    // Update
 
-    // delete
+    // Delete
+
 }
 
-// debug only
-// require_once '../Model.php';
+// DEBUG ONLY !!!
+// on a besoin d'une connection au model
 
-// // on crée une nouvelle instance de la classe Model
+// require_once '../Model.php';
+// On crée une nouvelle instance du Model
 // $model = new Model();
 
-// // on crée une nouvelle instance de la classe TodoController et on lui passe l'instance de la classe Model su'on vient de créer
+// On crée une nouvelle instance du Controlleur et on lui passe le model
 // $controller = new TodoController($model);
 
-// $todo = [
-//     'title' => 'titre test méthode create',
-//     'description' => 'description test',
-// ];
-
-// // on appelle la méthode getAll de la classe TodoController
-// $controller->create($todo);
+// On appelle la fonction getAll pour afficher la table
+// $controller-> getAll();
