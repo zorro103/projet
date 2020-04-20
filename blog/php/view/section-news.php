@@ -61,7 +61,7 @@
             $pdoStatement->execute($tabAssoColonneValeur);
 
 
-            // ETAPE3: JE RECUPERE MON TABLEAU DE RESULTATS
+            // ETAPE 3: JE RECUPERE MON TABLEAU DE RESULTATS
             // https://www.php.net/manual/fr/pdostatement.fetchall.php
             $tabLigne = $pdoStatement->fetchAll();
 
