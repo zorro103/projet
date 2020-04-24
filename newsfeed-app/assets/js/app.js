@@ -10,7 +10,8 @@ fetch(req)
     })
 
 
-// On recupère et on stocke les 2 éléments qui nous intéressent du document dans 2 variables
+// On recupère et on stocke les 3 éléments qui nous intéressent du document dans 3 variables
+const searchInput = document.querySelector("#search");
 const Btn = document.querySelector("#bouton-envoyer");
 const resultsDiv =document.querySelector("#resultats-news");
 
@@ -50,14 +51,18 @@ Btn.addEventListener("click", function() {
         console.log(`L'Auteur : ${author}`);
         console.log(`L'Image : ${image}`);
 
+        
         // On envoie les éléments dans index.php
 
+        // $image = $tabAsso["image"];
         // $image = image;
+
+        // var imageString = String(image);
 
         document.getElementById("titre").innerHTML=title;
         document.getElementById("description").innerHTML=description;
         document.getElementById("auteur").innerHTML=author; 
-        document.getElementById("img").innerHTML=image;   
+        document.getElementById("img").src=image;   
 
         // IL MANQUE LA BOUCLE POUR CREER CHAQUE NEWS
         
