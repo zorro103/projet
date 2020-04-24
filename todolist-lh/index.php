@@ -15,7 +15,7 @@
         <!-- ------------------------------- CREATE -------------------------------------- -->
         <section>
             <h2>Creation de tache</h2>
-            <!-- <img src="assets/upload/img01.jpg" alt=""> -->
+            <!-- <img src="assets/upload/img01.jpg" alt="">  -->
             <form class="ajax" action="" method="POST">
                 <div>
                     <label id="title" for="titre">Titre</label>
