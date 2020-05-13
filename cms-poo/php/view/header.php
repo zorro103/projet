@@ -14,6 +14,7 @@
             <a href="index.php">accueil</a>
             <a href="presentation.php">présentation</a>
             <a href="contact.php">contact</a>
+            <a href="admin.php">admin</a>
         </nav>
     </header>
     <main>
