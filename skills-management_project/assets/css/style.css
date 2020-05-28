@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 50px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666666;
+}
+
+
+nav a{
+    color: lightseagreen;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 0px;
+    margin-left: 0px;
+    text-decoration: none;
+}
+
+h1 {
+    color: lightseagreen;
+}
