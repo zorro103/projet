@@ -2,7 +2,7 @@
     </main>
 
     <footer>
-        Tous Droits réservés 2020
+        Tous Droits réservés &copy; 2020
     </footer>
     <script src="assets/js/app.js"></script>
 

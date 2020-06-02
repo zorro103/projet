@@ -11,6 +11,8 @@
     <header>
         <nav>
             <a href="index.php">Accueil</a>
+            &nbsp;I&nbsp;
+            <a href="admin.php">Admin</a>
         </nav>
         <h1>Skills Management Project</h1>
     </header>

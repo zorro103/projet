@@ -10,7 +10,6 @@ body {
     color: #666666;
 }
 
-
 nav a{
     color: lightseagreen;
     font-size: 20px;
@@ -22,4 +21,69 @@ nav a{
 
 h1 {
     color: lightseagreen;
+    font-size: 3em;
+}
+
+h2 {
+    color: #666666;
+    font-size: 2em;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+/* POUR SELECTIONNER TOUTES LES BALISES ENFANTS DIRECTS DE LA BALISE PARENTE FORM */
+form > * {
+    margin: 6px 0px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    color: #666666;
+    border-radius: 8px;
+    border: 1px solid #b5b5b5;
+    background-color: #f5f5f5;
+    
+}
+
+form label {
+    margin: 12px 0px 1px 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    color: #666666;
+    border-radius: 8px;
+    border: 0px;
+    background-color: inherit;
+}
+
+.big-button {
+    margin: 20px 0px;
+    width: 100%;
+    padding: 28px 0;
+    font-size: 20px;
+    color: #FFFFFF;
+    background-color: #666666;
+    border-radius: 8px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.big-button:hover {
+    background-color: lightseagreen;
+}
+
+.confirmation {
+    margin: 9px 0px 25px 0px;
+    padding: 10px;
+    font-size: 17px;
+    line-height: 16px;
+    color: #666666;
+    border-radius: 8px;
+    border: 0px solid #b5b5b5;
+    background-color: inherit;
 }
