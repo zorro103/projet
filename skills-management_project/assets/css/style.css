@@ -119,6 +119,7 @@ article {
 
 article:hover {
     border: 0px solid #aaa;
+    padding: 0px 30px 15px 20px;
     box-shadow: 1px 2px 8px #00000047;
     margin: 0.3rem;
     width: calc(100% / 3 - 0.6rem);
