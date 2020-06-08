@@ -20,4 +20,3 @@ const btn = document.getElementById("bouton-publish");
 
 btn.addEventListener("click", $requeteSQL);
    
-})
