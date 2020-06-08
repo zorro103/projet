@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    width:100%;
+    height:100%;
+    background-color: rgb(200, 240, 255);
+    font-family: Arial;
+    font-size:18px;
+    color: #333333;
+    padding:10px 30px;
+    margin:0;
+} 
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+a {
+    text-decoration: none;
+    color: seagreen;
+    font-size: 1.3em;
+}
+
+.card {
+    background-color: #FFF;
+    padding: 30px 30px 50px 30px;
+    margin: 50px 0;
+    box-shadow: 0px 2px 10px -3px;
+}
+
+.input-form {
+    width: 60%;
+    font-size: 18px;
+    padding: 7px;
+    margin: 0 20px 15px 0;
+    box-shadow: 0px 1px 5px -2px;
+    border-radius: 4px;
+    border: 0;
+}
+
+.btn-primary {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 9px 20px;
+    color: #FFF;
+    background-color: #2f8fde;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.btn-primary:hover {
+    background-color: #025faa;
+}
+
+.btn-cancel {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 9px 20px;
+    color: #FFF;
+    background-color: #de2f69;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.btn-cancel:hover {
+    background-color: #b60e46;
+}
+
+ul {
+    margin: 17px 0 0 -36px;
+}
+
+li {
+    font-size: 20px;
+    margin-bottom: 15px;
+    list-style: none;
+}
+
+.strikeout {
+    text-decoration: line-through;
+    color:#999999;
+}
+
+.priority {
+    color: #de2f69;
+}
+
+p {
+    display: inline;
+    margin: 0 20px 0 0;
+}
