@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /simplon/projet/php-cache/
@@ -5,4 +6,13 @@ RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /simplon/projet/php-cache/index.php [L]
+=======
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /simplon/projet/php-cache/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /simplon/projet/php-cache/index.php [L]
+>>>>>>> e3dbcfcf122cc0cdebc092107e8284ec9e1710d2
 </IfModule>

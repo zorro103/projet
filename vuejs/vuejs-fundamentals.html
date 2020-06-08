@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -113,4 +114,121 @@
         });
     </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js Fundamentals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Vue.js Fundamentals</h1>
+        <a href="https://vueschool.io/courses/vuejs-fundamentals" target="blank">vueschool.io/courses/vuejs-fundamentals</a>
+    </header>
+    <main>
+        <section class="card">
+
+            <!-- <h1>{{ header ? header : "Welcome" }}</h1> -->
+            <!-- <input type="text" v-model="header"> -->
+            
+            <div id="shopping-list">
+                <div class="header">
+                    <h1>{{ header.toLocaleUpperCase() }}</h1>
+                    <button v-if="state === 'default'" class="btn btn-primary" @click="changeState('edit')">Add Item</button>
+                    <button v-else class="btn btn-cancel" @click="changeState('default')">Cancel</button>          
+                </div>
+
+                <div v-if="state === 'edit'" class="add-item-form">
+
+                    <!-- lorsque l'on appuie sur la touche enter on ajoute un item à la liste  
+                    on a remplacé v-on: par @ plus simple-->
+                    <input class="input-form" type="text" v-model="newItem" placeholder="Add an item" @keyup.enter="saveItem">
+
+                    <p>{{ characterCount }}/200</p>
+
+                    <!-- au click on ajoute un item à la liste -->
+                    <button class="btn btn-primary" v-bind:disabled="newItem.length === 0" @click="saveItem">Save Item</button>
+                </div>
+
+                <!-- <a v-bind:href="newItem" target="blank">Dynamic Link</a> -->
+                
+                <ul>
+                    <!-- Une classe dynamique -->
+                    <li v-for="item in reversedItems" :class="{strikeout: item.purchased}" @click="togglePurchased(item)">{{ item.label }}</li>
+                    <!-- Plusieurs classes dynamiques -->
+                    <!-- <li v-for="item in items" :class="[item.purchased ? 'strikeout' : '', item.highPriority ? 'priority' : '']">{{ item.label }}</li> -->
+                    <!-- Une classe dynamique (strikeout) et une classe normale (priority) que l'on peut aussi sortir du tableau ça revient au même -->
+                    <!-- <li v-for="item in items" :class="[item.purchased ? 'strikeout' : '', 'priority']">{{ item.label }}</li> -->
+                </ul>
+                <p v-if="items.length === 0">Nice job ! You've bought all your items.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        Tous droits réservés 2020
+    </footer>
+    
+    <!-- ETAPE 1 -->
+    <!-- ON CHARGE LE CODE DE VUEJS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var shoppingList = new Vue ({
+            el: "#shopping-list",
+            data: {
+                state:"default",
+                header: "shopping list app",
+                // header: null
+                newItem: "",
+                items: [
+                    {
+                        label: "10 party hats",
+                        purchased: false,
+                        highPriority: false,
+                    },
+                    {
+                        label: "2 board games",
+                        purchased: true,
+                        highPriority: false,
+                    }, 
+                    {
+                        label: "20 cups",
+                        purchased: false,
+                        highPriority: true,
+                    },
+                ]
+            }, 
+            // Pour changer la présentation des datas on utilse un compute
+            computed: {
+                reversedItems() {
+                    return this.items.slice(0).reverse(); // slice sert à copier le tableau des items pour ensuite appliquer un reverse
+                },
+                characterCount() {
+                    return this.newItem.length;
+                }
+            },
+            // Pour changer les datas on utilise une method
+            methods: {
+                saveItem: function() {
+                    this.items.push({
+                        label: this.newItem,
+                        purchased: false,
+                    },);
+                    this.newItem ="";
+                },
+                changeState: function(newState) {
+                    this.state = newState;
+
+                    this.newItem ="";
+                },
+                togglePurchased: function(item) {
+                    item.purchased = !item.purchased;
+                }
+            }
+        });
+    </script>
+</body>
+>>>>>>> e3dbcfcf122cc0cdebc092107e8284ec9e1710d2
 </html>
