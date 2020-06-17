@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse an integer</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+function reverseInteger(num) {
+  return (
+    parseFloat(
+      num
+        .toString()
+        .split('')
+        .reverse()
+        .join('')
+    ) * Math.sign(num)
+  )                 
+}
+
+reverseInteger("");
+
+console.log(reverseInteger(-12345678.9));
+
+</script>
+
+</html>

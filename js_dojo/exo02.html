@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate a palindrome</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+function validatePalindrome(str) {
+    // Step 1. Lowercase the string and use the RegExp to remove unwanted characters from it
+    var remove = /[\W_]/g; // or var remove = /[^A-Za-z0-9]/g;
+    
+    var lowRegStr = str.toLowerCase().replace(remove, '');
+    // str.toLowerCase() = "Esope reste ici et se repose".toLowerCase() = "esope reste ici et se repose"
+    // str.replace(/[\W_]/g, '') = "esope reste ici et se repose".replace(/[\W_]/g, '') = "esoperesteicietserepose"
+    // var lowRegStr = "esoperesteicietserepose";
+        
+    // Step 2. Use the same chaining methods with built-in functions from the previous article 'Three Ways to Reverse a String in JavaScript'
+    var reverseStr = lowRegStr.split('').reverse().join('');
+    
+    // Step 3. Check if reverseStr is strictly equals to lowRegStr and return a Boolean
+    return reverseStr === lowRegStr; // "esoperesteicietserepose" === "esoperesteicietserepose"? => true
+}
+ 
+validatePalindrome("");
+
+console.log(validatePalindrome("Esope reste ici et se repose"));
+
+</script>
+
+</html>

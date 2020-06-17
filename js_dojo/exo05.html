@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Character</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+// https://medium.com/@darealseun/javascript-algorithms-part-4-maximum-character-3c0f23b08cf1
+
+function maxChar(str) {
+    
+    const charMap = {};
+    let max = 0;
+    let maxChar = '';
+  
+    for (let char of str) { 
+      if (!charMap[char]) {
+        charMap[char] = 1;
+      } else {
+        charMap[char]++;
+      }
+    }
+    console.log(charMap)
+  
+    for (let char in charMap) {
+      if (charMap[char] > max) {
+        max = charMap[char];
+        maxChar = char;
+      }
+    }
+  
+    return maxChar;
+ }
+
+maxChar("");
+
+console.log(maxChar("Welcome to the dojo of javascript"));
+
+</script>
+
+</html>
